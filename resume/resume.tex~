@@ -1,0 +1,55 @@
+\documentclass[letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[sc, osf]{mathpazo}
+\usepackage{geometry}
+\def\name{Ryan Gao}
+%\def\footerlink{}
+
+\hypersetup{
+  colorlinks = true,
+  urlcolor = blue,
+  pdfautor = {\name},
+  pdfkeywords = {astrophysics, astronomy, programming},
+  pdftitle = {\name: Résumé},
+  pdfsubject = {Résumé},
+  pdfpagemode = UseNone
+}
+
+\geometry{
+  body = {6.5in, 8.5in},
+  left = 1.0in,
+  top = 1.25in
+}
+
+\thispagestyle{empty}
+\pagestyle{myheadings}
+\markright{/name}
+
+\usepackage{sectsty}
+\sectionfont{\rmfamily\mdseries\large}
+\subsectionfont{\rmfamily\mdseries\itshape\large}
+
+\setlength\parindent{0em}
+
+\renewenvironment{itemize}{
+  \begin{list}{}{
+      \setlength{\letmargin}{1.5em}
+    }
+}{
+  \end{list}
+}
+
+\begin{document}
+
+\centerline{\huge \name}
+
+\vsapce{0.25in}
+
+\begin{minipage}{0.5\linewidth}
+  \begin{ncenter}
+    Email:
+    Phone:
+    Website:
+  \end{ncenter}
+\end{minipage}
+   

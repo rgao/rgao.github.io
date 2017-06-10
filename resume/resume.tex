@@ -1,0 +1,87 @@
+\documentclass[letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage[sc, osf]{mathpazo}
+\usepackage{geometry}
+\def\name{Ryan Gao}
+%\def\footerlink{}
+
+\hypersetup{
+  colorlinks = true,
+  urlcolor = blue,
+  pdfauthor = {\name},
+  pdfkeywords = {astrophysics, astronomy, programming},
+  pdftitle = {\name: Résumé},
+  pdfsubject = {Résumé},
+  pdfpagemode = UseNone
+}
+
+\geometry{
+  body = {6.5in, 8.5in},
+  left = 1.0in,
+  top = 1.25in
+}
+
+\thispagestyle{empty}
+\pagestyle{myheadings}
+\markright{/name}
+
+\usepackage{sectsty}
+\sectionfont{\rmfamily\mdseries\large}
+\subsectionfont{\rmfamily\mdseries\itshape\large}
+
+\setlength\parindent{0em}
+
+\renewenvironment{itemize}{
+  \begin{list}{}{
+      \setlength{\leftmargin}{1.5em}
+    }
+}{
+  \end{list}
+}
+
+\begin{document}
+
+\centerline{\huge \name}
+
+\vspace{0.25in}
+
+\begin{center}
+  \begin{minipage}{0.5\linewidth}
+    \begin{center}
+    Email: xinghoshi@gmail.com\\
+    Phone: 626-532-5137\\
+    Website: rgao.github.io
+    \end{center}
+\end{minipage}
+\end{center}
+
+\section*{Personal}
+
+\begin{itemize}
+\item Born 1993 in Guizhou, China
+\item US citizen since 2005
+\item NY resident for 7 years; CA resident for 10
+\end{itemize}
+
+\section*{Education
+}
+\begin{itemize}
+\item B.A. Astrophysics, UC Berkeley, 2016
+\item Temple City High School, 2011
+\end{itemize}
+
+\section*{Experience}
+\begin{itemize}
+\item Breakthrough Listen intern, UC Berkeley SETI, 05/2016-08/2016
+\item Radio Astronomy Lab course, Spring 2014
+\end{itemize}
+
+\section*{Skills and Tools}
+\begin{itemize}
+\item Programming: Python (experienced), C++ (basic), HTML/CSS/javascript (basic), SQL (basic)
+\item Jupyter Notebook
+\item LaTex, Emacs, Microsoft Word, Powerpoint
+\item Basic telescope operation
+
+\end{document}
