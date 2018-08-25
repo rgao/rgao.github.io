@@ -1,0 +1,54 @@
+\documentclass[11pt]{letter} % Default font size of the document, change to 10pt to fit more text
+
+\usepackage{newcent} % Default font is the New Century Schoolbook PostScript font 
+%\usepackage{helvet} % Uncomment this (while commenting the above line) to use the Helvetica font
+
+% Margins
+\topmargin=-1in % Moves the top of the document 1 inch above the default
+\textheight=8.5in % Total height of the text on the page before text goes on to the next page, this can be increased in a longer letter
+\oddsidemargin=-10pt % Position of the left margin, can be negative or positive if you want more or less room
+\textwidth=6.5in % Total width of the text, increase this if the left margin was decreased and vice-versa
+
+\let\raggedleft\raggedright % Pushes the date (at the top) to the left, comment this line to have the date on the right
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	ADDRESSEE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{letter}{Recruitment Officer \\
+  Private Westside} 
+
+%----------------------------------------------------------------------------------------
+%	YOUR NAME & ADDRESS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{center}
+\large\bf Ryan Gao \\
+%\vspace{20pt} \hrule height 1pt % If you would like a horizontal line separating the name from the address, uncomment the line to the left of this text
+145 El Dorado St \\ Arcadia, CA 91006 \\ (626)-532-5137 % Your address and phone number
+\end{center} 
+\vfill
+
+\signature{Ryan Gao} % Your name for the signature at the bottom
+
+%----------------------------------------------------------------------------------------
+%	LETTER CONTENT SECTION
+%----------------------------------------------------------------------------------------
+
+\opening{Private Westside,} 
+ 
+I am interested in being a tutor for your program. I discovered your posting via craigslist and I believe that my skills and qualifications align with your expectations. I graduated from UC Berkeley with a B.A. in Astrophysics and am currently enrolled in a computer science program at UCLA for the next academic semester. Back in high school, I interned as an SAT Math Tutor at a private institution after I had finished taking my SAT exam. I did not pursue teaching in college; however, this year I taught one-on-one English in China to Chinese hopefuls, ranging from fifteen to twenty-two years old, who wish to study abroad. During my internship at UC Berkeley post-graduation, my final responsibility was to transform the code from all my work into an interactive python notebook tutorial for teaching purposes, so future interns and staff members can freely reference it.
+
+While I had not pursued extensive, formal teaching experience, I believe my strengths will allow me to successfully engage students and provide them with the necessary information to triumph. I have always exceled at standardized testing, scoring 800 on SAT Math and 680 on GRE Quantitative. I believe my knowledge and strategies on standardized quantitative testing would be of great use for students to also excel on these exams. My experience teaching in China provided me with more insight on working with teenagers and young adults. Different age groups work better with different kinds of attention and instruction; students in college or have already graduated tend to respond well above In addition to tutor in standardized tests, I can comfortably teach astronomy, astronomy-related physics, basic physics mechanics, basic coding in python, and all math subjects up to and including single-variable calculus.
+
+Thank you very much for your time. As time draws close to the Fall 2018 academic semester, I am looking forward to life in West LA, both as a student and as a tutor. I hope to hear from you!
+
+\closing{Sincerely yours, \\
+
+%----------------------------------------------------------------------------------------
+
+\end{letter}
+
+\end{document}
