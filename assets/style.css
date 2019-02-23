@@ -1,0 +1,126 @@
+body {
+    background-image: url("images/bluedot.jpg");
+    background-size: cover;
+    background-position: cover;
+    background-attachment: fixed;
+    top: 0;
+    font-family: "Courier"
+}
+
+#empty-div {
+    height: 45vh;
+}
+
+/* navbar */
+
+#about, #portfolio, #cv, #contact {
+    font-weight: normal;
+    color: goldenrod
+}
+
+.main {
+    color: goldenrod;
+}
+
+h5 {
+    border-top: 3px double goldenrod;
+    border-bottom: 3px double goldenrod;
+    font-weight: bold
+}
+
+.navlink:link, .navlink:visited {
+    color: goldenrod;
+}
+
+.navlink:hover {
+    color: cyan;
+}
+
+.navlink:active {
+    color: navy;
+}
+
+#empty-div2 {
+    height: 15vh;
+}
+
+/* portfolio */
+
+#portfolio-div {
+    height: 45vh;
+    font-family: Impact;
+    margin-left: 20vh;
+    margin-right: 20vh;
+}
+
+#portfolio-div2 {
+    margin-left: 20vh;
+    margin-right: 20vh;
+}
+
+.polaroid {
+    background: rgba(255, 255, 255, .75);
+    box-shadow: 0 4px 8px 0 navy, 0 6px 20px 0 orange;
+}
+  
+.project-name {
+    text-align: center;
+    opacity: .6;
+}
+
+.project-name:hover {
+    background-color: navy
+}
+
+.subtext, li {
+    font-size: 11px;
+    font-family: 'Tahoma';
+}
+
+#project-name1 {
+    color: maroon
+}
+
+#project-name2 {
+    color: green;
+}
+
+#project-name4 {
+    color: blueviolet;
+    font-family: "Impact";
+    /* font-size: 16px; */
+}
+
+#project-name5 {
+    color: brown;
+    font-family: "Impact";
+}
+
+#solar-system, #telescope, #undergraduate, #lahcid, #coffee {
+    width: 100%;
+    height: 100%;
+}
+
+#telescope, #coffee {
+    margin-left: -15px;
+    /* margin-right: -15px */
+}
+
+/* footer */
+
+.logocol {
+    box-shadow: 0 2px  turquoise, 0 2px  cyan;
+    background: linear-gradient(rgb(65, 65, 158), white);
+    opacity: .8
+}
+
+.contact-logo {
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    color: #ffffff;
+}
+
+
