@@ -26,6 +26,7 @@ body {
 
 #header {
     background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+    background: -webkit-linear-gradient(to right, #AA3A38, #2F7336);
     -webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
