@@ -49,15 +49,15 @@ body {
     height: 3px;
 }
 
-a:link, a:visited {
+.navlink:link, .navlink:visited {
     color: goldenrod;
 }
 
-a:hover {
+.navlink:hover {
     color: teal;
 }
 
-a:active {
+.navlink:active {
     color: #082667;
 }
 
@@ -85,7 +85,7 @@ a:active {
 }
 
 @media screen and (max-width: 555px) {
-    a {
+    .navlink {
         display: block;
     }
 }
@@ -97,19 +97,19 @@ a:active {
 }
 
 @media screen and (max-width: 555px) {
-    a:link, a:visited {
+    .navlink:link, .navlink:visited {
         color: orange;
     }
 }
 
 @media screen and (max-width: 555px) {
-    a:hover {
+    .navlink:hover {
         color: teal;
     }
 }
 
 @media screen and (max-width: 555px) {
-    a:active {
+    .navlink:active {
         color: #082667;
     }
 }
