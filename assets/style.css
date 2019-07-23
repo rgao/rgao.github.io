@@ -65,6 +65,10 @@ body {
     height: 10vh;
 }
 
+#cvmodalbody {
+    font-family: Source Sand Pro;
+}
+
 @media screen and (max-width: 555px) {
     #empty-div {
         height: 15vh;

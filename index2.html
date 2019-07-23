@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Gugi&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="assets/style.css">
 </head>
 
@@ -37,7 +38,7 @@
                 <div class="menu-divider mx-2">|</div>
                 <a class="navlink" id="link2" href="#">Portfolio</a>
                 <div class="menu-divider mx-2">|</div>
-                <a class="navlink" id="link3" href="#">Curriculum Vitae</a>
+                <a class="navlink" id="cv-btn" href="" data-toggle="modal" data-target="#CVModal">CV & Resume</a>
                 <div class="menu-divider mx-2">|</div>
                 <a class="navlink" id="contact-btn" href="" data-toggle="modal" data-target="#contactModal">Contact</a>
                 <div class="menu-divider ml-2">|</div>
@@ -49,15 +50,46 @@
 
     <div id="empty-div3"></div>
 
-    <!-- Modal -->
+    <!-- CV Modal -->
+    <div class="modal fade" id="CVModal" tabindex="-1" role="dialog" aria-labelledby="CVModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="CVModalLabel">Curriculum Vitae</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span class="close-icon" aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id='cvmodalbody'>
+                    Here is my curriculum vitae; it is also
+                    <a href="resume.pdf" download="gaoresume">available for download.</a> 
+                    <hr>
+                    <h3>Summary</h3>
+                    <p>Programmer with a scientific education background and experience in data processing seeking entry into the software and data industries. 
+                        Familiar with various of software tools including several programming languages; skilled in empirical analysis, scientific computing and informational writing. 
+                        Passionate about ethical applications of data science and evidence-based approaches to solving problems in an increasingly digital era.
+                    </p>
+                    <h3>Skills</h3>
+                    <h3>Experience</h3>
+                    <h3>Education</h3>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!--Contact Modal -->
     <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Contact</h5>
+                    <h5 class="modal-title" id="contactModalLabel">Contact</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
+                        <span class="close-icon" aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body text-center">
@@ -76,14 +108,9 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
             </div>
         </div>
     </div>
-
-    <a href="resume.pdf" download="gaoresume">
-        <img src="/images/myw3schoolsimage.jpg" alt="resume">
-      </a> 
 
     <footer class="footer copyright text-center mt-5 pt-2">
         <div class="row justify-content-center mb-3" id="logobar">
