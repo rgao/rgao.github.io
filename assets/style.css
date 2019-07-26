@@ -65,9 +65,29 @@ body {
     height: 10vh;
 }
 
+/* cv modal */
+
 #cvmodalbody {
-    font-family: Source Sand Pro;
+    font-family: 'Source Sans Pro';
 }
+
+.cvheader {
+    text-align: center;
+}
+
+ul {
+    columns: 2;
+}
+
+#personal {
+    columns: 1;
+}
+
+.cvitem {
+    font-size: 14px;
+}
+
+/* mobile responsiveness */
 
 @media screen and (max-width: 555px) {
     #empty-div {
