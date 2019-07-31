@@ -34,12 +34,16 @@
         <div class="justify-content-center text-center" id="menu-wrapper">
             <h5 class="menu">
                 <div class="menu-divider mr-2">|</div>
-                <a class="navlink" id="link1" href="#">About</a>
+                <a class="navlink" id="about-btn" href="" data-toggle="modal" data-target="#aboutModal">About</a>
                 <div class="menu-divider mx-2">|</div>
-                <a class="navlink" id="link2" href="#">Portfolio</a>
+                <br class="mobile-menu-divider">
+                <a class="navlink" id="portfolio-btn" href="" data-toggle="modal"
+                    data-target="#portfolioModal">Portfolio</a>
                 <div class="menu-divider mx-2">|</div>
+                <br class="mobile-menu-divider">
                 <a class="navlink" id="cv-btn" href="" data-toggle="modal" data-target="#CVModal">CV & Resume</a>
                 <div class="menu-divider mx-2">|</div>
+                <br class="mobile-menu-divider">
                 <a class="navlink" id="contact-btn" href="" data-toggle="modal" data-target="#contactModal">Contact</a>
                 <div class="menu-divider ml-2">|</div>
             </h5>
@@ -49,6 +53,181 @@
     </div>
 
     <div id="empty-div3"></div>
+
+    <!-- About Modal -->
+    <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="aboutModalLabel">Me</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span class="close-icon" aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id='aboutmodalbody'>
+                    <img id="selfie" src="assets/images/acorn.png">
+                    <br>
+                    <p id="about-text">bla bla</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal -->
+    <div class="modal fade" id="portfolioModal" tabindex="-1" role="dialog" aria-labelledby="portfolioModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content" id="portfolio-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="portfolioModalLabel">Projects</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span class="close-icon" aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <br>
+                <p class="ml-3" id="project-subtitle">Click image for project link</p>
+                <div class="modal-body" id='portfoliomodalbody'>
+                    <h5 class="project-title">Solar System Simulator</h5>
+                    <hr>
+                    <div>
+                        <a href="https://purerange.github.io/Solar-System-Simulator/" class="project-link"
+                            target="_blank">
+                            <img class="project-img polaroid mb-4" id="solar-system"
+                                src="assets/images/solar_system.jpg">
+                        </a>
+                        <p class="project-text">Inspired by the idea of accurately depicting the barycenter of the
+                            Solar System as being outside of the Sun, we crafted this project primarily using HTML and
+                            CSS. I used available open-source code to re-create a live planet/Moon tracker based on user
+                            location (longitude/latitude).
+                            <br>
+                            <br>
+                            Tools: HTML, CSS, NASA API, math
+                            <br>
+                            <a href="https://github.com/Purerange/Solar-System-Simulator" class="project-link"
+                                target="_blank">
+                                Github Link
+                            </a>
+                        </p>
+                    </div>
+
+                    <h5 class="project-title">Radio Frequency Interference Detection: SETI Internship</h5>
+                    <hr>
+                    <div>
+                        <a href="https://github.com/rgao/berkeley/blob/master/BreakthroughListen/BL_poster.pptx"
+                            class="project-link" target="_blank">
+                            <img class="project-img polaroid mb-4" id="telescope" src="assets/images/green_bank.jpg">
+                        </a>
+                        <p class="project-text">
+                            I worked with hardware to track local cellphone signals and radio
+                            stations, and used the Green Bank Telescope to track atmospheric noise. In addition, I
+                            worked on signal processing and data visualization. My work serves
+                            as instruction manuals in the form of Jupyter notebooks for future interns.
+                            <br>
+                            <br>
+                            Tools: Python, hackrf, Jupyter notebook, GNU Radio, math
+                            <br>
+                            <a href="https://github.com/rgao/berkeley/blob/master/BreakthroughListen/hackrf/.ipynb_checkpoints/hackrf-checkpoint.ipynb"
+                                class="project-link" target="_blank">
+                                Jupyter notebook: Cellphone transmissions
+                            </a>
+                            <br>
+                            <a href="https://github.com/rgao/berkeley/blob/master/BreakthroughListen/stations/sdr_stations.ipynb"
+                                class="project-link" target="_blank">
+                                Jupyter notebook: Radio stations
+                            </a>
+                        </p>
+                    </div>
+
+                    <h5 class="project-title">Robonaut</h5>
+                    <hr>
+                    <div>
+                        <a href=https://agile-crag-67026.herokuapp.com/ target="_blank">
+                            <img class="project-img polaroid mb-4" id="robot" src="assets/images/robot.png">
+                        </a>
+                        <p class="project-text">
+                            As a first-time exercise in building a full-stack app, Robonaut includes an user-login
+                            feature that stores registered information into databases and remembers custom user choices.
+                            It employs express and handlebars for routing, and MySQL for data storage.
+                            <br>
+                            <br>
+                            Tools: HTML, CSS, javascript, Express, handlebars, MySQL
+                            <br>
+                            <a href="https://github.com/rgao/robot" target="_blank" class="project-link">
+                                Github Link
+                            </a>
+                        </p>
+                    </div>
+
+                    <h5 class="project-title">Hyper Coffee</h5>
+                    <hr>
+                    <div>
+                        <a href="https://rgao.github.io/hyper_coffee/" target="_blank">
+                            <img class="project-img polaroid mb-4" id="coffee"
+                                src="assets/images/hyper-coffee-arcadia.jpg">
+                        </a>
+                        <p class="project-text">
+                            This is a simple website I designed for my favorite local coffee shop.
+                            <br>
+                            <br>
+                            Tools: HTML, CSS, javascript
+
+                            <a href="https://github.com/Purerange/Solar-System-Simulator" class="project-link"
+                                target="_blank">
+                                Github Link
+                            </a>
+                        </p>
+                    </div>
+
+                    <!-- <h5 class="project-title">mern</h5>
+                    <hr>
+                    <div>
+                        <a href="https://github.com/rgao/berkeley/blob/master/BreakthroughListen/stations/sdr_stations.ipynb"
+                            target="_blank">
+                            <img class="project-img polaroid mb-4" id="telescope" src="assets/images/green_bank.jpg">
+                        </a>
+                        <p class="project-text">
+                            My research internship at Breakthrough Listen focused on the fundamentals of detecting radio
+                            frequency interference. I worked with hardware to track local cellphone signals and radio
+                            stations, and used the Green Bank Telescope to track atmospheric noise. In addition, I
+                            worked on signal processing and data visualization. My work serves
+                            as instruction manuals in the form of Jupyter notebooks for future interns.
+                        </p>
+                        <br>
+                        <br>
+                        Tools: Python, hackrf,
+                    </div> -->
+
+                    <h5 class="project-title">Undergraduate Work: Radio Astromony Lab</h5>
+                    <hr>
+                    <div>
+                        <a href="https://github.com/rgao/berkeley/tree/master/ugastro/interferometer" target="_blank">
+                            <img class="project-img polaroid mb-4" id="berkeley-logo"
+                                src="assets/images/berkeley-logo.png">
+                        </a>
+                        <p class="project-text">This is a lab report on interferometry from my undergraduate lab course.
+                            It was an exercise in scientific computing, informative writing, data analysis, and data
+                            visualization.
+                            <br>
+                            <br>
+                            Tools: Python, math
+                            <br>
+                            Additional Example: <a
+                                href='https://github.com/rgao/berkeley/blob/master/ugastro/digital/digital.pdf'
+                                class="project-link" target="_blank">Digital Signal Processing
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
 
     <!-- CV Modal -->
     <div class="modal fade" id="CVModal" tabindex="-1" role="dialog" aria-labelledby="CVModalLabel" aria-hidden="true">
@@ -61,8 +240,8 @@
                     </button>
                 </div>
                 <div class="modal-body" id='cvmodalbody'>
-                    Here is my curriculum vitae; it is also
-                    <a href="resume.pdf" download="gaoresume">available for download.</a>
+                    Here is my resume; it is also
+                    <a href="resume.pdf" id="resume-link" download="gaoresume">available for download.</a>
                     <hr>
                     <h3 class='cvheader'>Summary</h3>
                     <p>Programmer with a scientific education background and experience in data processing seeking entry
@@ -79,36 +258,57 @@
                         <li class="cvitem">MERN Framework / React Native</li>
                         <li class="cvitem">Front-end / back-end responsive web design</li>
                         <li class="cvitem">Object-orientated programming</li>
-                        <li class="cvitem">Jupyter Notebook</li>
+                        <li class="cvitem">Databases & APIs</li>
+                        <li class="cvitem">Teaching</li>
                         <li class="cvitem">Scientific computing and visualization</li>
                         <li class="cvitem">Data assessment & analysis</li>
                         <li class="cvitem">Linear algebra, multivariable calculus</li>
                         <li class="cvitem">Informative / scientific writing</li>
-                        <li class="cvitem">Signal processing</li>
+                        <li class="cvitem">Jupyter Notebook</li>
                     </ul>
 
                     <h3 class='cvheader'>Experience</h3>
+                    <h5>Freelancer</h5>
+                    Current
+                    <p>Now trained in full-stack web design, I am seeking projects to work on from clients. I am
+                        currently working on a website for a local coffee shop.</p>
 
+                    <h5>Breakthrough Listen Research Intern</h5>
+                    Summer 2016
+                    <p>Berkeley SETI focuses on researching the possibility of extraterrestrial life. The Breakthrough
+                        Listen program under SETI aims to detect extraordinary radio signals and determine their
+                        characteristics and origin. My research internship focused on signal processing methods using
+                        Python to filter out radio frequency interference (RFI) that originated from
+                        our radio-heavy modern world. My work is saved in Jupyter notebooks as a learning tool for
+                        future interns and astronomy students as a general guide to working on RFIs.</p>
+
+                    <h5>Tutor</h5>
+                    Worked as a math and English tutor at various times.
+                    <br>
+                    <br>
                     <h3 class='cvheader'>Education</h3>
-                    <h5>Data Science Micromaster, MITx Online, 08/2018 - Current</h5>
+                    <h5>Data Science Micromaster, MITx Online</h5>
+                    08/2018 - Current
                     <ul>
                         <li class="cvitem">Probability</li>
                         <li class="cvitem">Data Analysis in Social Science</li>
                         <li class="cvitem">Statistics</li>
                         <li class="cvitem">Machine Learning with Python (ongoing)</li>
                     </ul>
-                    <h5>Full Stack Programming, UCLA Extension, 08/2018 - 03/2019</h5>
+                    <h5>Full Stack Programming, UCLA Extension</h5>
+                    08/2018 - 03/2019
                     <ul>
                         <li class="cvitem">Web design, databases, object-orientated programming</li>
                     </ul>
-                    <h5>Astrophysics, B.A., UC Berkeley, 2011 - 2016</h5>
+                    <h5>Astrophysics, B.A., UC Berkeley</h5>
+                    2011-2016
                     <ul>
                         <li class="cvitem">Radio Astronomy Lab</li>
                         <li class="cvitem">Multivariable Calculus, Linear Algebra</li>
                         <li class="cvitem">Quantum Mechanics, Electrodynamics</li>
                         <li class="cvitem">Stellar Physics, Plantary Sciences, Cosmology</li>
                     </ul>
-                    <h5>Personal</h5>
+                    <h3 class="cvheader">Personal</h3>
                     <ul id="personal">
                         <li class="cvitem">U.S. Citizen</li>
                         <li class="cvitem">Flexible to work on the West / East Coast, or near any urban center</li>

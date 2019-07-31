@@ -44,6 +44,10 @@ body {
     display: inline;
 }
 
+.mobile-menu-divider {
+    display: none;
+}
+
 #menu-border-bot {
     background: linear-gradient(to right, goldenrod 0%, #082667 100%);
     height: 3px;
@@ -63,6 +67,106 @@ body {
 
 #empty-div3 {
     height: 10vh;
+}
+
+/* about */
+
+#selfie {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    display: block;
+}
+
+/* portfolio */
+
+.modal-content {
+    background: #888888
+}
+
+#project-subtitle {
+    font-family: 'Source Sans Pro'
+}
+
+.project-title {
+    clear: both;
+}
+
+.polaroid {
+    /* background: rgba(255, 255, 255, 0.7); */
+    box-shadow: 0 4px 8px 0 navy, 0 6px 20px 0 orange;
+}
+
+.project-img {
+    float: left;
+}
+
+.project-link, #resume-link {
+    color: navy;
+}
+
+.project-link:active, #resume-link:active {
+    color: indigo;
+}
+
+.project-text {
+    width: 55%;
+    float: right;
+    font-family: 'Source Sans Pro';
+}
+
+#solar-system, #telescope, #coffee {
+    width: 40%;
+}
+
+#robot {
+    width: 30%;
+}
+
+#berkeley-logo {
+    width: 25%;
+}
+
+/* .project-name {
+    text-align: center;
+    opacity: .6;
+}
+
+.project-name:hover {
+    background-color: navy
+}
+
+.subtext, li {
+    font-size: 11px;
+    font-family: 'Tahoma';
+}
+
+#project-name1 {
+    color: maroon
+}
+
+#project-name2 {
+    color: green;
+}
+
+#project-name4 {
+    color: blueviolet;
+    font-family: "Impact";
+}
+
+#project-name5 {
+    color: brown;
+    font-family: "Impact";
+}
+
+#telescope, #coffee {
+    margin-left: -15px;
+} */
+
+@media screen and (max-width: 992px) {
+    #solar-system {
+        width: 100%;
+    }
 }
 
 /* cv modal */
@@ -97,7 +201,7 @@ ul {
 
 @media screen and (max-width: 555px) {
     #empty-div2 {
-        height: 15vh;
+        height: 10vh;
     }
 }
 
@@ -153,66 +257,10 @@ ul {
     }
 }
 
-/* portfolio */
-
-#portfolio-div {
-    height: 45vh;
-    font-family: Impact;
-    margin-left: 20vh;
-    margin-right: 20vh;
-}
-
-#portfolio-div2 {
-    margin-left: 20vh;
-    margin-right: 20vh;
-}
-
-.polaroid {
-    background: rgba(255, 255, 255, .75);
-    box-shadow: 0 4px 8px 0 navy, 0 6px 20px 0 orange;
-}
-  
-.project-name {
-    text-align: center;
-    opacity: .6;
-}
-
-.project-name:hover {
-    background-color: navy
-}
-
-.subtext, li {
-    font-size: 11px;
-    font-family: 'Tahoma';
-}
-
-#project-name1 {
-    color: maroon
-}
-
-#project-name2 {
-    color: green;
-}
-
-#project-name4 {
-    color: blueviolet;
-    font-family: "Impact";
-    /* font-size: 16px; */
-}
-
-#project-name5 {
-    color: brown;
-    font-family: "Impact";
-}
-
-#solar-system, #telescope, #undergraduate, #lahcid, #coffee {
-    width: 100%;
-    height: 100%;
-}
-
-#telescope, #coffee {
-    margin-left: -15px;
-    /* margin-right: -15px */
+@media screen and (max-width: 555px) {
+    .mobile-menu-divider {
+        display: inline;
+    }
 }
 
 /* footer */
