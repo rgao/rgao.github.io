@@ -71,6 +71,13 @@ body {
 
 /* about */
 
+.modal-content {
+    background: #111111;
+    opacity: .9;
+    border: 3px solid gold;
+    color: white;
+}
+
 #selfie {
     margin-left: auto;
     margin-right: auto;
@@ -78,14 +85,16 @@ body {
     display: block;
 }
 
-/* portfolio */
-
-.modal-content {
-    background: #888888
+#about-text {
+    font-family: 'Source Sans Pro';
+    font-size: 14px;
+    text-align: justify;
 }
 
+/* portfolio */
+
 #project-subtitle {
-    font-family: 'Source Sans Pro'
+    font-family: 'Source Sans Pro';
 }
 
 .project-title {
@@ -102,7 +111,7 @@ body {
 }
 
 .project-link, #resume-link {
-    color: navy;
+    color: blue;
 }
 
 .project-link:active, #resume-link:active {
