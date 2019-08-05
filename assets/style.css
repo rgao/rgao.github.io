@@ -124,6 +124,13 @@ body {
     font-family: 'Source Sans Pro';
 }
 
+@media screen and (max-width: 992px) {
+    #solar-system-text {
+        width: 100%;
+        text-align: justify;
+    }
+}
+
 #solar-system, #telescope, #coffee {
     width: 40%;
 }
