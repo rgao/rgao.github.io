@@ -131,7 +131,7 @@ body {
     }
 }
 
-#solar-system, #telescope, #coffee {
+#solar-system, #hfla_311, #telescope, #nyt, #coffee {
     width: 40%;
 }
 
@@ -142,42 +142,6 @@ body {
 #berkeley-logo {
     width: 25%;
 }
-
-/* .project-name {
-    text-align: center;
-    opacity: .6;
-}
-
-.project-name:hover {
-    background-color: navy
-}
-
-.subtext, li {
-    font-size: 11px;
-    font-family: 'Tahoma';
-}
-
-#project-name1 {
-    color: maroon
-}
-
-#project-name2 {
-    color: green;
-}
-
-#project-name4 {
-    color: blueviolet;
-    font-family: "Impact";
-}
-
-#project-name5 {
-    color: brown;
-    font-family: "Impact";
-}
-
-#telescope, #coffee {
-    margin-left: -15px;
-} */
 
 @media screen and (max-width: 992px) {
     #solar-system {
