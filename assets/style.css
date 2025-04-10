@@ -58,11 +58,11 @@ body {
 }
 
 .navlink:hover {
-    color: teal;
+    color: turquoise;
 }
 
 .navlink:active {
-    color: #082667;
+    color: teal;
 }
 
 #empty-div3 {
@@ -111,11 +111,11 @@ body {
 }
 
 .project-link, #resume-link {
-    color: blue;
+    color: rgb(0, 162, 255);
 }
 
 .project-link:active, #resume-link:active {
-    color: indigo;
+    color: rgb(107, 233, 241);
 }
 
 .project-text {
@@ -141,6 +141,10 @@ body {
 
 #berkeley-logo {
     width: 25%;
+}
+
+#defunct {
+    color: orange;
 }
 
 @media screen and (max-width: 992px) {
