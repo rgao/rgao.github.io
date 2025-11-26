@@ -57,7 +57,7 @@
     <!-- About Modal -->
     <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModalLabel"
         aria-hidden="true">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog" id="about-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="aboutModalLabel">Me</h5>
@@ -66,9 +66,30 @@
                     </button>
                 </div>
                 <div class="modal-body" id='aboutmodalbody'>
-                    <img id="selfie" class="polaroid" src="assets/images/self.jpg">
+                    <img id="selfie" src="assets/images/selfie3.jpeg">
                     <br>
-                    <p id="about-text">Looking for opportunities in development and data analysis. Please take a look!
+                    <p id="about-text">
+                        Welcome! I'm looking for opportunities in education, web development, and data analysis.
+                        My journey in tech began during my studies at UC Berkeley, where I learned scientific
+                        programming on big data through my astrophysics coursework and research. I used python to perform data
+                        analysis, cleanup, and visualization of radio astronomy data. I followed up my studies with a research
+                        internship at Berkeley SETI, where I further worked on signal processing.
+                        <br>
+                        <br>
+                        Since then, I've expanded my skill set by completing a Full-Stack Web Development program at UCLA Extension 
+                        and a Data Science Micromaster Certificate from MITx online. I've volunteered with Hack for LA, 
+                        applying my web development and data analysis skills to impactful civic projects.
+                        <br>
+                        <br>
+                        I have also worked as an educator, tutoring students of various ages in both math and English.
+                        Most recently, I worked as a tutor in Hong Kong, gaining valuable experience is a collaborative setting
+                        and improving my communication skills for both instruction and teamwork.
+                        <br>
+                        <br>
+                        I'm passionate about scientific literacy and ethical appliciations of technology in this age of complex
+                        and volatile information ecosystems. I'm looking forward to applying my skills to that end in future roles.,
+                        Feel free to explore my portfolio and reach out if you'd like to connect! I and flexible to work in either
+                        New York or California, both places that I call home.
                     </p>
                 </div>
             </div>
@@ -106,7 +127,7 @@
                             <br>
                             <br>
                             Tools & Tech: Python (+pandas, numpy), Jupyter notebook, Sanic, ReactJS, Docker, postgreSQL,
-                            SQLAchemy
+                            SQLAlchemy
                             <br>
                             <a href="https://github.com/rgao/311-data" class="project-link" target="_blank">
                                 Github link
@@ -114,7 +135,7 @@
                         </p>
                     </div>
 
-                    <h5 class="project-title">Radio Frequency Interference Detection: SETI Internship</h5>
+                    <h5 class="project-title">SETI Internship: Detecting and Processing Radio Frequency Interference</h5>
                     <hr>
                     <div>
                         <a href="https://github.com/rgao/berkeley/blob/master/BreakthroughListen/BL_poster.pptx"
@@ -142,23 +163,25 @@
                         </p>
                     </div>
 
-                    <h5 class="project-title"><div id="defunct">[[DEFUNCT]]</div> MERN app: New York Times Article Scraper</h5>
+                    <h5 class="project-title">
+                        MERN App: Associated Press Article Scraper
+                    </h5>
                     <hr>
                     <div>
-                        <a href="https://shrouded-journey-18704.herokuapp.com" target="_blank">
-                            <img class="project-img polaroid mb-4" id="nyt" src="assets/images/nyt.png">
+                        <a href="https://ap-scraper.onrender.com/" target="_blank">
+                            <img class="project-img polaroid mb-4" id="nyt" src="assets/images/associatedpress.png">
                         </a>
                         <p class="project-text">
-                            My first React-designed full stack app, it scrapes article information from New York Times.
-                            Visitors can save the scraped articles into a mongo database and can remove them from it.
-                            The form includes input validation and default parameters. The design is responsive and
-                            works nicely on mobile.
+                            A foundational full-stack app, it scrapes information from the Associated Press.
+                            Visitors can save the scraped articles into a mongo database and can leave comments under 
+                            an article. The design is responsive and works nicely on mobile. The app is containerized 
+                            using Docker and is deployed on Render.com.
                             <br>
                             <br>
-                            Tools: MongoDB, Express, ReactJS, node.js, HTML/CSS, javascript
+                            Tools: Docker, MongoDB, Express, javascript, React.js, node.js, HTML/CSS
                             <br>
-                            <a href="https://github.com/rgao/NYT_Search" class="project-link" target="_blank">
-                                NYT Article Search
+                            <a href="https://github.com/rgao/AP_scraper" class="project-link" target="_blank">
+                                Github Link
                             </a>
                         </p>
                     </div>
@@ -216,13 +239,14 @@
                                 src="assets/images/hyper-coffee-arcadia.jpg">
                         </a>
                         <p class="project-text">
-                            This is a simple website I designed for my favorite local coffee shop.
+                            This is a simple website I designed for a local coffee shop.
                             <br>
                             <br>
                             Tools: HTML, CSS, javascript
 
-                            <a href="https://github.com/Purerange/Solar-System-Simulator" class="project-link"
+                            <a href="https://github.com/rgao/hyper_coffee" class="project-link"
                                 target="_blank">
+                                <br>
                                 Github Link
                             </a>
                         </p>
@@ -231,19 +255,23 @@
                     <h5 class="project-title">Undergraduate Work: Radio Astromony Lab</h5>
                     <hr>
                     <div>
-                        <a href="https://github.com/rgao/berkeley/tree/master/ugastro/interferometer" target="_blank">
+                        <a href="https://github.com/rgao/berkeley/tree/master/ugastro" target="_blank">
                             <img class="project-img polaroid" id="berkeley-logo" src="assets/images/berkeley-logo.png">
                         </a>
-                        <p class="project-text">This is a lab report on interferometry from my undergraduate lab course.
-                            It was an exercise in scientific computing, informative writing, data analysis, and data
-                            visualization.
+                        <p class="project-text">My undergraduate lab work primarily involved signal processing.
+                            We worked with hardware to collect and then sample data, transforming them into 
+                            useful information.
                             <br>
                             <br>
-                            Tools: Python, math
+                            The lab report below, on interferometry, combines scientific programming, data collection &  
+                            analysis, math, physics, and data visualization into a coherent piece.
                             <br>
-                            Additional Example: <a
-                                href='https://github.com/rgao/berkeley/blob/master/ugastro/digital/digital.pdf'
-                                class="project-link" target="_blank">Digital Signal Processing
+                            <br>
+                            Tools: Python, math, telescopes, other hardware
+                            <br>
+                            Lab Report: <a
+                                href='https://github.com/rgao/berkeley/blob/master/ugastro/interferometer/lab_3.pdf'
+                                class="project-link" target="_blank">Interferometry
                             </a>
                         </p>
                     </div>
@@ -270,10 +298,13 @@
                     <a href="Resume.pdf" id="resume-link" download="gaoresume">available for download.</a>
                     <hr>
                     <h3 class='cvheader'>Summary</h3>
-                    <p>Programmer and educator with a scientific education background and experience in data processing seeking entry
+                    <p>Programmer and educator with a scientific education background and experience in data processing
+                        seeking entry
                         into the software and data industries.
-                        Familiar with various technology, including Python, pandas, javascript, React, Rust, Docker, SQL, HTML/CSS, R, and Excel.
-                        Skilled in scientific computing, informative writing, educating, math, and organization. Analytical and goal-driven by nature.
+                        Familiar with various technology, including Python, pandas, javascript, React, Rust, Docker,
+                        SQL, HTML/CSS, R, and Excel.
+                        Skilled in scientific computing, informative writing, educating, math, and organization.
+                        Analytical and goal-driven by nature.
                         Passionate about ethical applications of data science and evidence-based approaches to solving
                         problems in an increasingly complex era.
                     </p>
@@ -298,23 +329,26 @@
                     <h5>Elite Education - Teacher of Mathematics</h5>
                     09/2024 - Current
                     <p>Personal tutor for an education consulting company:
-                        <ul>
-                            <li class="cvitem">Tutor students in math, English, science, and engages in interview training</li>
-                            <li class="cvitem">Submit written feedback after each session, and write progress reports</li>
-                            <li class="cvitem">Organize student data and resources, plan lessons, and work with counseling team for student needs</li>
-                        </ul>
+                    <ul>
+                        <li class="cvitem">Tutor students in math, English, science, and engages in interview training
+                        </li>
+                        <li class="cvitem">Submit written feedback after each session, and write progress reports</li>
+                        <li class="cvitem">Organize student data and resources, plan lessons, and work with counseling
+                            team for student needs</li>
+                    </ul>
                     </p>
 
                     <h5>Hack for LA - Volunteer</h5>
                     10/2019 - 04/2020
                     <p>Hack for LA engages community-driven projects for various clients, including businesses and
                         the city of LA. I worked on a mid-scale project using data from 311 calls.
-                        <ul>
-                            <li class="cvitem">Analysis, visualization & data cleanup of 311-call data</li>
-                            <li class="cvitem">Contributed to the development side with Sanic and ReactJS. Developed a contact page</li>
-                            <li class="cvitem">Contributed to various points of the pipeline, including back-end</li>
-                        </ul>
-                        Each project involves a team of contributing developers, data analysis, manager, among others.
+                    <ul>
+                        <li class="cvitem">Analysis, visualization & data cleanup of 311-call data</li>
+                        <li class="cvitem">Contributed to the development side with Sanic and ReactJS. Developed a
+                            contact page</li>
+                        <li class="cvitem">Contributed to various points of the pipeline, including back-end</li>
+                    </ul>
+                    Each project involves a team of contributing developers, data analysis, manager, among others.
                     </p>
 
                     <h5>Breakthrough Listen Research Intern</h5>
@@ -328,7 +362,8 @@
 
                     <h5>Tutor</h5>
                     2010, 2018, & 2019
-                    <p>Worked as a math and English tutor at various times. Taught algebra for math and IELTS/TOEFL for English.</p>
+                    <p>Worked as a math and English tutor at various times. Taught algebra for math and IELTS/TOEFL for
+                        English.</p>
                     <br>
                     <br>
                     <h3 class='cvheader'>Education</h3>

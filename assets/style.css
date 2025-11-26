@@ -69,33 +69,44 @@ body {
     height: 10vh;
 }
 
-/* about */
+.modal {
+    font-family: 'Century Gothic', sans-serif;
+    margin: auto;
+}
+
+.modal-lg {
+    max-width: 900px;
+}
+
+#about-dialog {
+    max-width: 600px;
+}
 
 .modal-content {
-    background: #111111;
     opacity: .9;
     border: 3px solid gold;
-    color: white;
+    color: black;
 }
+
+/* about */
 
 #selfie {
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 100%;
     display: block;
 }
 
 #about-text {
-    font-family: 'Source Sans Pro';
-    font-size: 14px;
+    font-size: 15px;
     text-align: justify;
 }
 
 /* portfolio */
 
-#project-subtitle {
+/* #project-subtitle {
     font-family: 'Source Sans Pro';
-}
+} */
 
 .project-title {
     clear: both;
@@ -121,7 +132,7 @@ body {
 .project-text {
     width: 55%;
     float: right;
-    font-family: 'Source Sans Pro';
+    /* font-family: 'Helvetica'; */
 }
 
 @media screen and (max-width: 992px) {
@@ -155,9 +166,9 @@ body {
 
 /* cv modal */
 
-#cvmodalbody {
+/* #cvmodalbody {
     font-family: 'Source Sans Pro';
-}
+} */
 
 .cvheader {
     text-align: center;
