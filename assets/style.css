@@ -10,7 +10,7 @@ body {
     /* position: relative; */
     top: 0;
     min-height: 100%;
-    font-family: 'Gugi', cursive
+    font-family: 'Gugi'
 }
 
 #header {
@@ -166,16 +166,23 @@ body {
 
 /* cv modal */
 
-/* #cvmodalbody {
-    font-family: 'Source Sans Pro';
-} */
-
-.cvheader {
-    text-align: center;
+.summary {
+    font-size: 14px;
+    text-align: justify;
 }
 
-ul {
+#skill-list {
     columns: 2;
+}
+
+.date-range {
+    float: right;
+    font-style: italic;
+}
+
+.courses {
+    font-size: 14px;
+    text-align: justify;
 }
 
 #personal {
@@ -283,7 +290,7 @@ footer {
 }
 
 #copyright-text {
-    font-size: .5em;
+    font-size: .6em;
 }
 
 
