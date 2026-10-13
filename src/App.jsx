@@ -378,13 +378,13 @@ export default function App() {
                             </div>
                         </a>
 
-                        <a href="https://www.linkedin.com/in/ryan-gao-46a4312b/" target="_blank" rel="noreferrer" className="contact-card">
+                        {/* <a href="https://www.linkedin.com/in/ryan-gao-46a4312b/" target="_blank" rel="noreferrer" className="contact-card">
                             <Linkedin size={18} color="#0077b5" />
                             <div>
                                 <div className="contact-label">LinkedIn</div>
                                 <div>Connect Profile</div>
                             </div>
-                        </a>
+                        </a> */}
                     </div>
                 </section>
 
