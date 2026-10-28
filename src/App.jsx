@@ -17,38 +17,37 @@ const projects = [
     {
         title: "Redistricting Tracker",
         status: "Interactive Tool",
-        description: "Geospatial data tool evaluating Congressional districts altered by mid-decade redistricting. Ingests boundary geometries and election returns to benchmark partisan margin shifts and net swing against baseline results.",
+        description: "Interactive geospatial tool tracking congressional districts altered by mid-decade redistricting. Ingested district geometries with precinct data and election results to create interactive maps, and analyzed the impact of redistricting through data modeling with interactive chart visualizations.",
         image: "/images/gerrymander.png",
         demo: "https://rgao.github.io/redistricting_tracker/",
         repo: "https://github.com/rgao/redistricting_tracker",
         tags: ["Python", "GeoPandas", "Folium", "JavaScript", "HTML/CSS"]
     },
     {
-        title: "LA 311 Civic Analytics Pipeline",
+        title: "Associated Press News Scraper",
+        status: "Full Stack",
+        description: "Full-stack interactive interface application containerized with Docker. Programmatically extracts articles from the Associated Press, cleans and stores records into MongoDB. Made with Express and React, and without the assistance of AI. Reproducible with Docker containerization.",
+        image: "/images/associatedpress.png",
+        repo: "https://github.com/rgao/AP_scraper",
+        tags: ["Docker", "MongoDB", "Express", "React.js", "Node.js", "JavaScript"]
+    },
+    {
+        title: "Los Angeles 311-call Civic Data Analysis",
         status: "Open Source",
-        description: "Civic data platform converting Los Angeles municipal 311 service requests into actionable operational metrics. Contributed to ETL scripts, data sanitization routines, and API endpoints.",
+        description: "Open-source civic project transforming Los Angeles municipal 311 logs into structured metrics for a full app. Contributed to developing the ETL pipeline and front-end, and assisted with relational database normalization.",
         image: "/images/ladata.png",
         demo: "https://github.com/rgao/311-data",
         repo: "https://github.com/rgao/311-data",
-        tags: ["Python", "Pandas", "PostgreSQL", "Sanic", "ReactJS", "Docker", "SQLAlchemy"]
+        tags: ["Python", "Pandas", "PostgreSQL", "Docker", "Sanic"]
     },
     {
-        title: "SETI: Radio Frequency Interference (RFI)",
+        title: "SETI: Radio Frequency Interference (RFI) Signal Processing",
         status: "Research",
-        description: "Digital signal processing analyzing local radio frequency interference (RFI) using HackRF software-defined radio and baseline observation datasets. Implemented Python/NumPy routines for signal reduction, spectral Fourier transformations, and documented analytical pipelines in reproducible Jupyter notebooks.",
+        description: "Digital signal processing analyzing ground-source local radio frequency interference (RFI), as well as the 21-cm line from space dust using the Green Bank Telescope. Implemented Python scripts for signal reduction and generating spectral plots. Work saved as instructional Jupyter notebooks for future interns.",
         image: "/images/green_bank.jpg",
         demo: "https://github.com/rgao/berkeley/blob/master/BreakthroughListen/BL_poster.pptx",
         repo: "https://github.com/rgao/berkeley",
-        tags: ["Python / NumPy", "HackRF", "GNU Radio", "Jupyter", "Signal Processing"]
-    },
-    {
-        title: "AP Automated Scraper & Database",
-        status: "Full Stack",
-        description: "Full-stack web utility that scrapes wire articles from the Associated Press, caches records into MongoDB, and renders an interactive reader interface. Containerized with Docker.",
-        image: "/images/associatedpress.png",
-        demo: "https://ap-scraper.onrender.com/",
-        repo: "https://github.com/rgao/AP_scraper",
-        tags: ["Docker", "MongoDB", "Express", "React.js", "Node.js", "JavaScript"]
+        tags: ["Python", "NumPy", "HackRF", "GNU Radio", "Jupyter", "Signal Processing"]
     },
     {
         title: "Undergraduate Astronomy Lab: Interferometry",
@@ -63,9 +62,8 @@ const projects = [
 
 const skills = [
     "Python (Pandas, NumPy, GeoPandas)",
-    "SQL (PostgreSQL, SQLite)",
-    "Data Annotation & Taxonomy Curation",
-    "Model Output Auditing & RLHF Evaluation",
+    "SQL, PostgreSQL",
+    "Data Annotation & Model Evaluation",
     "Prompt Design & Edge-Case Testing",
     "ETL Pipelines & Data Cleaning",
     "Statistical & Numerical Modeling",
@@ -164,13 +162,13 @@ export default function App() {
                         </div>
                         <div className="about-content">
                             <p>
-                                I'm a <strong>data analyst</strong> based in New York City with an academic background in <strong>Astrophysics from UC Berkeley</strong>.
+                                I'm a data specialist based in New York City with a degree in Astrophysics from UC Berkeley, as well as certificates in Data Science and Full-Stack Development.
                             </p>
                             <p>
-                                My primary focus is on empirical data cleaning, spatial modeling, and reproducible computational workflows. Most recently, I engineered an interactive geospatial tool tracking congressional redistricting margin shifts using Python and GeoPandas. Currently, I evaluate model outputs, taxonomy adherence, and curated datasets as a data specialist with Workada.
+                                I focus on data visualization, data modeling, geospatial analysis, and scientific processes, aspiring towards geospatial data science. Most recently, I engineered an interactive geospatial tool tracking congressional redistricting using Python and GeoPandas, visualizing margin shifts and modeling the impact of redistricting. My past and current experiences include radio astronomy signal processing, engineering ETL pipelines for civic data, and auditing model outputs for AI evaluation.
                             </p>
                             <p>
-                                I prioritize empirical accuracy, clean documentation, and transparent analytical methodology. Explore my recent projects below or reach out directly to connect.
+                                I prioritize empirical analysis, data integrity, and clean technical documentation. Please feel free to reach out if you'd like to discuss potential opportunities in data analytics.
                             </p>
                             <div className="about-contact-callout">
                                 <span>Direct email: <a href="mailto:ryanxingao@gmail.com">ryanxingao@gmail.com</a></span>
@@ -188,7 +186,7 @@ export default function App() {
                     <div className="projects-grid">
                         {projects.map((proj, idx) => (
                             <div key={idx} className="project-card">
-                                <a href={proj.demo} target="_blank" rel="noreferrer" className="project-thumbnail-link">
+                                <a href={proj.demo || proj.repo} target="_blank" rel="noreferrer" className="project-thumbnail-link">
                                     <img src={proj.image} alt={proj.title} className="project-thumbnail" />
                                 </a>
                                 <div className="project-details">
@@ -203,9 +201,11 @@ export default function App() {
                                         ))}
                                     </div>
                                     <div className="project-links">
-                                        <a href={proj.demo} target="_blank" rel="noreferrer">
-                                            <ExternalLink size={15} /> Live Project
-                                        </a>
+                                        {proj.demo && (
+                                            <a href={proj.demo} target="_blank" rel="noreferrer">
+                                                <ExternalLink size={15} /> Live Project
+                                            </a>
+                                        )}
                                         <a href={proj.repo} target="_blank" rel="noreferrer">
                                             <Github size={15} /> Source Code
                                         </a>
@@ -233,12 +233,12 @@ export default function App() {
                     <div className="cv-section">
                         <h3 className="cv-section-title">Summary</h3>
                         <p className="cv-summary-text">
-                            Quantitative data specialist with a degree in Astrophysics from UC Berkeley and post-graduate credentials in Data Science and Full-Stack Development. Experienced in dataset annotation, model evaluation, Python ETL scripts, and radio astronomy signal processing. Focuses on data integrity, rigorous verification, and clean technical documentation.
+                            Data specialist with a degree in Astrophysics from UC Berkeley and certificates in Data Science and Full-Stack Development. Experienced in building automated ETL pipelines in Python, evaluating machine learning models, and modeling spatial data. Focuses on empirical analysis, quantitative reasoning, reproducible pipelines, and clear technical documentation.
                         </p>
                     </div>
 
                     <div className="cv-section">
-                        <h3 className="cv-section-title">Technical Skills & Competencies</h3>
+                        <h3 className="cv-section-title">Skills and Tools</h3>
                         <div className="skills-pills-container">
                             {skills.map((skill, index) => (
                                 <span key={index} className="skill-pill">{skill}</span>
@@ -251,55 +251,53 @@ export default function App() {
 
                         <div className="experience-item">
                             <div className="exp-header">
-                                <span className="exp-role">Data Annotator & Evaluation Contractor</span>
+                                <span className="exp-role">Data Labeler</span>
                                 <span className="exp-org">Workada (Remote)</span>
                                 <span className="exp-date">08/2026 – Present</span>
                             </div>
                             <ul className="exp-bullets">
-                                <li>Evaluate and compare paired model outputs across diverse technical and domain-specific prompts.</li>
-                                <li>Author structured qualitative justifications detailing comparative model strengths, flaws, and trade-offs.</li>
+                                <li>Evaluate and compare paired model outputs against prompts across specific categories.</li>
+                                <li>Write qualitative justifications detailing comparative model strengths, flaws, and trade-offs.</li>
                                 <li>Audit model responses against source materials to identify factual errors, logical flaws, and edge-case failures.</li>
-                                <li>Apply multi-tier quality rubrics to maintain consistent evaluation benchmarks across subject areas.</li>
                             </ul>
                         </div>
 
                         <div className="experience-item">
                             <div className="exp-header">
-                                <span className="exp-role">Quantitative Instructor (Mathematics & Physics)</span>
+                                <span className="exp-role">Math Instructor</span>
                                 <span className="exp-org">Elite Education, Hong Kong</span>
                                 <span className="exp-date">09/2024 – 10/2025</span>
                             </div>
                             <ul className="exp-bullets">
-                                <li>Delivered individualized analytical instruction across multivariable calculus, trigonometry, mechanics, and statistics.</li>
-                                <li>Deconstructed complex mathematical theorems and problem-solving proofs into structured, reproducible steps.</li>
-                                <li>Maintained detailed diagnostic progress records, tracking quantitative benchmarks and learning outcomes.</li>
-                                <li>Collaborated with counseling coordinators to adjust analytical milestones and lesson structures.</li>
+                                <li>Tutored students in algebra, trigonometry, geometry, and calculus to prepare them for standardized testing and upcoming school curriculum.</li>
+                                <li>Wrote feedback after every session detailing the content and material used, and the quality of the student's work.</li>
+                                <li>Made tailored syllabus, quantitatively tracked student progress, and provided benchmark assessments.</li>
+                                <li>Worked with the counseling team to steer students towards their goals and adjust their trajectory.</li>
                             </ul>
                         </div>
 
                         <div className="experience-item">
                             <div className="exp-header">
                                 <span className="exp-role">Volunteer Data Analyst</span>
-                                <span className="exp-org">Hack for LA, Los Angeles</span>
+                                <span className="exp-org">Hack for LA (Los Angeles, CA)</span>
                                 <span className="exp-date">10/2019 – 02/2020</span>
                             </div>
                             <ul className="exp-bullets">
-                                <li>Engineered Python/Pandas ETL pipelines to ingest, clean, and analyze high-volume municipal 311 incident logs.</li>
-                                <li>Contributed to backend data endpoints using Sanic and assisted with frontend React components.</li>
-                                <li>Packaged project environments using Docker to maintain reproducible local testing setups.</li>
+                                <li>Built Python and Pandas ETL pipelines to ingest, clean, and process high-volume municipal 311 service call datasets.</li>
+                                <li>Contributed to backend service endpoints using Sanic and assisted with containerization using Docker.</li>
                             </ul>
                         </div>
 
                         <div className="experience-item">
                             <div className="exp-header">
-                                <span className="exp-role">Research Intern (Signal Processing)</span>
-                                <span className="exp-org">Breakthrough Listen / UC Berkeley</span>
+                                <span className="exp-role">Research Intern</span>
+                                <span className="exp-org">Breakthrough Listen / Berkeley SETI (Berkeley, CA)</span>
                                 <span className="exp-date">05/2016 – 08/2016</span>
                             </div>
                             <ul className="exp-bullets">
-                                <li>Processed observation records to identify radio frequency interference (RFI) against baseline datasets.</li>
-                                <li>Built Python and NumPy scripts to isolate signals, execute Fourier transforms, and generate spectral plots.</li>
-                                <li>Documented analytical workflows in Jupyter notebooks as reproducible reference guides for future research cohorts.</li>
+                                <li>Analyzed radio frequency interference (RFI) patterns by evaluating ground-level radio signals against baseline observation survey data.</li>
+                                <li>Wrote Python scripts to isolate candidate signals, perform Fast Fourier Transforms (FFT), and produce spectral plots.</li>
+                                <li>Documented all radio processing work in Jupyter notebooks as reference for future interns and students.</li>
                             </ul>
                         </div>
                     </div>
@@ -311,10 +309,10 @@ export default function App() {
                             <div className="exp-header">
                                 <span className="exp-role">Astrophysics, Bachelor of Arts</span>
                                 <span className="exp-org">University of California, Berkeley</span>
-                                <span className="exp-date">08/2011 – 05/2016</span>
+                                <span className="exp-date">2011 – 2016</span>
                             </div>
                             <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginTop: '4px' }}>
-                                Coursework: Multivariable Calculus, Linear Algebra, Quantum Mechanics, Radio Astronomy Laboratory, Stellar Physics, Cosmology
+                                Key Coursework: Multivariable Calculus, Linear Algebra, Radio Astronomy Laboratory, Quantum Mechanics
                             </p>
                         </div>
 
@@ -322,10 +320,10 @@ export default function App() {
                             <div className="exp-header">
                                 <span className="exp-role">Data Science, MicroMasters Credential</span>
                                 <span className="exp-org">MITx Online</span>
-                                <span className="exp-date">08/2018 – 10/2019</span>
+                                <span className="exp-date">2018 – 2019</span>
                             </div>
                             <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginTop: '4px' }}>
-                                Coursework: Probability & Statistics, Data Analysis for Social Scientists (R), Machine Learning with Python
+                                Key Coursework: Probability & Statistics, Data Analysis for Social Scientists, Machine Learning with Python
                             </p>
                         </div>
 
@@ -333,19 +331,19 @@ export default function App() {
                             <div className="exp-header">
                                 <span className="exp-role">Full-Stack Web Development, Certificate</span>
                                 <span className="exp-org">UCLA Extension</span>
-                                <span className="exp-date">08/2018 – 10/2019</span>
+                                <span className="exp-date">2018 – 2019</span>
                             </div>
                             <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginTop: '4px' }}>
-                                Coursework: Node.js, React.js, MongoDB, Express, SQL Database Architecture
+                                Key Coursework: Database Architecture, Relational SQL, Node.js, React.js
                             </p>
                         </div>
                     </div>
 
                     <div className="cv-section">
-                        <h3 className="cv-section-title">Personal</h3>
+                        <h3 className="cv-section-title">Additional</h3>
                         <ul className="exp-bullets">
-                            <li>U.S. Citizen; full work authorization</li>
-                            <li>Languages: English (native), Mandarin (working proficiency)</li>
+                            <li>U.S. Citizen</li>
+                            <li>Languages: English (Native), Mandarin (Limited Proficiency)</li>
                         </ul>
                     </div>
                 </section>
