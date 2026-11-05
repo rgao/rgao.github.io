@@ -24,12 +24,13 @@ const projects = [
         tags: ["Python", "GeoPandas", "Folium", "JavaScript", "HTML/CSS"]
     },
     {
-        title: "Associated Press News Scraper",
-        status: "Full Stack",
-        description: "Full-stack interactive interface application containerized with Docker. Programmatically extracts articles from the Associated Press, cleans and stores records into MongoDB. Made with Express and React, and without the assistance of AI. Reproducible with Docker containerization.",
-        image: "/images/associatedpress.png",
-        repo: "https://github.com/rgao/AP_scraper",
-        tags: ["Docker", "MongoDB", "Express", "React.js", "Node.js", "JavaScript"]
+        title: "2026 U.S. Senate Midterm Forecast",
+        status: "Forecasting Tool",
+        description: "Rapid-prototype election forecasting tool built for the 2026 midterms. Implemented a simplified version of Decision Desk HQ's modeling methodology, aggregating state-level polling data with recency adjustments and running probabilistic seat simulations to project chamber balance and key race outcomes.",
+        image: "/images/senate_forecast.png",
+        demo: "https://rgao.github.io/senate2026_forecast/",
+        repo: "https://github.com/rgao/senate2026_forecast",
+        tags: ["Python", "R", "React.js", "Statistical Modeling", "Simulation"]
     },
     {
         title: "Los Angeles 311-call Civic Data Analysis",
