@@ -26,7 +26,7 @@ const projects = [
     {
         title: "2026 U.S. Senate Midterm Forecast",
         status: "Forecasting Tool",
-        description: "Rapid-prototype election forecasting tool built for the 2026 midterms. Implemented a simplified version of Decision Desk HQ's modeling methodology, aggregating state-level polling data with recency adjustments and running probabilistic seat simulations to project chamber balance and key race outcomes.",
+        description: "Prototypical forecast for the 2026 Senate elections, in preparation for 2028 forecasting. Quickly implemented using a simplified version of Decision Desk HQ's modeling methodology, incorporating ingested polling data with fundamentals and regional covariance for running Monte-Carlo simulations to project the 2026 Senate races.",
         image: "/images/senate_forecast.png",
         demo: "https://rgao.github.io/senate2026_forecast/",
         repo: "https://github.com/rgao/senate2026_forecast",
