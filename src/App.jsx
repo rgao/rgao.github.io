@@ -27,7 +27,7 @@ const projects = [
         title: "2026 U.S. Senate Midterm Forecast",
         status: "Forecasting Tool",
         description: "Prototypical forecast for the 2026 Senate elections, in preparation for 2028 forecasting. Quickly implemented using a simplified version of Decision Desk HQ's modeling methodology, incorporating ingested polling data with fundamentals and regional covariance for running Monte-Carlo simulations to project the 2026 Senate races.",
-        image: "/images/senate_forecast.png",
+        image: "/images/senateforecast.png",
         demo: "https://rgao.github.io/senate2026_forecast/",
         repo: "https://github.com/rgao/senate2026_forecast",
         tags: ["Python", "R", "React.js", "Statistical Modeling", "Simulation"]
