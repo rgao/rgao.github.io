@@ -17,7 +17,10 @@ const projects = [
     {
         title: "Redistricting Tracker",
         status: "Interactive Tool",
-        description: "Interactive geospatial tool tracking congressional districts altered by mid-decade redistricting. Ingested district geometries with precinct data and election results to create interactive maps, and analyzed the impact of redistricting through data modeling with interactive chart visualizations.",
+        description: [
+            "Interactive geospatial tool tracking congressional districts altered by mid-decade redistricting. Ingested district geometries with precinct data and election results to create interactive maps, and analyzed the impact of redistricting through data modeling with interactive chart visualizations.",
+            "This is my ongoing election-based project. Work in progress to incorporate the midterm results."
+        ],
         image: "/images/gerrymander.png",
         demo: "https://rgao.github.io/redistricting_tracker/",
         repo: "https://github.com/rgao/redistricting_tracker",
@@ -26,7 +29,9 @@ const projects = [
     {
         title: "2026 U.S. Senate Midterm Forecast",
         status: "Forecasting Tool",
-        description: "Prototypical forecast for the 2026 Senate elections, in preparation for 2028 forecasting. Quickly implemented using a simplified version of Decision Desk HQ's modeling methodology, incorporating ingested polling data with fundamentals and regional covariance for running Monte-Carlo simulations to project the 2026 Senate races.",
+        description: [
+            "Prototypical forecast for the 2026 Senate elections, in preparation for 2028 forecasting. Implemented using a simplified version of Decision Desk HQ's methodology, incorporating ingested polling data with fundamentals and regional covariance to run simulations to project the 2026 Senate races."
+        ],
         image: "/images/senateforecast.png",
         demo: "https://rgao.github.io/senate2026_forecast/",
         repo: "https://github.com/rgao/senate2026_forecast",
@@ -35,7 +40,9 @@ const projects = [
     {
         title: "Los Angeles 311-call Civic Data Analysis",
         status: "Open Source",
-        description: "Open-source civic project transforming Los Angeles municipal 311 logs into structured metrics for a full app. Contributed to developing the ETL pipeline and front-end, and assisted with relational database normalization.",
+        description: [
+            "Open-source civic project transforming Los Angeles municipal 311 logs into structured metrics for a full app. Contributed to developing the ETL pipeline and front-end, and assisted with relational database normalization."
+        ],
         image: "/images/ladata.png",
         demo: "https://github.com/rgao/311-data",
         repo: "https://github.com/rgao/311-data",
@@ -44,7 +51,9 @@ const projects = [
     {
         title: "SETI: Radio Frequency Interference (RFI) Signal Processing",
         status: "Research",
-        description: "Digital signal processing analyzing ground-source local radio frequency interference (RFI), as well as the 21-cm line from space dust using the Green Bank Telescope. Implemented Python scripts for signal reduction and generating spectral plots. Work saved as instructional Jupyter notebooks for future interns.",
+        description: [
+            "Digital signal processing analyzing ground-source local radio frequency interference (RFI), as well as the 21-cm line from space dust using the Green Bank Telescope. Implemented Python scripts for signal reduction and generating spectral plots. Work saved as instructional Jupyter notebooks for future interns."
+        ],
         image: "/images/green_bank.jpg",
         demo: "https://github.com/rgao/berkeley/blob/master/BreakthroughListen/BL_poster.pptx",
         repo: "https://github.com/rgao/berkeley",
@@ -53,7 +62,9 @@ const projects = [
     {
         title: "Undergraduate Astronomy Lab: Interferometry",
         status: "Research",
-        description: "Signal sampling, Fourier transformations, and data reduction for astronomical interferometry using radio telescope arrays. Focused on mathematical modeling, aperture synthesis, and noise analysis.",
+        description: [
+            "Signal sampling, Fourier transformations, and data reduction for astronomical interferometry using radio telescope arrays. Focused on mathematical modeling, aperture synthesis, and noise analysis."
+        ],
         image: "/images/berkeley-logo.png",
         demo: "https://github.com/rgao/berkeley/blob/master/ugastro/interferometer/lab_3.pdf",
         repo: "https://github.com/rgao/berkeley/tree/master/ugastro",
@@ -195,8 +206,13 @@ export default function App() {
                                         <h3 className="project-title">{proj.title}</h3>
                                         <span className="project-status">{proj.status}</span>
                                     </div>
-                                    <p className="project-description">{proj.description}</p>
-                                    <div className="tech-badges">
+                                    {Array.isArray(proj.description) ? (
+                                        proj.description.map((paragraph, pIdx) => (
+                                            <p key={pIdx} className="project-description">{paragraph}</p>
+                                        ))
+                                    ) : (
+                                        <p className="project-description">{proj.description}</p>
+                                    )}                                    <div className="tech-badges">
                                         {proj.tags.map((t, i) => (
                                             <span key={i} className="badge">{t}</span>
                                         ))}
