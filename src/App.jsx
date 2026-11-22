@@ -44,7 +44,6 @@ const projects = [
             "Open-source civic project transforming Los Angeles municipal 311 logs into structured metrics for a full app. Contributed to developing the ETL pipeline and front-end, and assisted with relational database normalization."
         ],
         image: "/images/ladata.png",
-        demo: "https://github.com/rgao/311-data",
         repo: "https://github.com/rgao/311-data",
         tags: ["Python", "Pandas", "PostgreSQL", "Docker", "Sanic"]
     },
@@ -55,8 +54,7 @@ const projects = [
             "Digital signal processing analyzing ground-source local radio frequency interference (RFI), as well as the 21-cm line from space dust using the Green Bank Telescope. Implemented Python scripts for signal reduction and generating spectral plots. Work saved as instructional Jupyter notebooks for future interns."
         ],
         image: "/images/green_bank.jpg",
-        demo: "https://github.com/rgao/berkeley/blob/master/BreakthroughListen/BL_poster.pptx",
-        repo: "https://github.com/rgao/berkeley",
+        repo: "https://github.com/rgao/berkeley/blob/master/BreakthroughListen",
         tags: ["Python", "NumPy", "HackRF", "GNU Radio", "Jupyter", "Signal Processing"]
     },
     {
@@ -66,8 +64,7 @@ const projects = [
             "Signal sampling, Fourier transformations, and data reduction for astronomical interferometry using radio telescope arrays. Focused on mathematical modeling, aperture synthesis, and noise analysis."
         ],
         image: "/images/berkeley-logo.png",
-        demo: "https://github.com/rgao/berkeley/blob/master/ugastro/interferometer/lab_3.pdf",
-        repo: "https://github.com/rgao/berkeley/tree/master/ugastro",
+        repo: "https://github.com/rgao/berkeley/blob/master/ugastro/interferometer/lab_3.pdf",
         tags: ["Python", "Mathematical Modeling", "Signal Processing", "Data Reduction"]
     }
 ];
